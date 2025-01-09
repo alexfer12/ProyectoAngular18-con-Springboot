@@ -1,0 +1,58 @@
+body{
+
+  background-image: url('assets/fondo2.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.content-wrapper {
+  flex: 1;
+}
+
+
+.footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  position: static;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #0056b3;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.footer-content a {
+  margin: 0 5px;
+}

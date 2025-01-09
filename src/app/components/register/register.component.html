@@ -1,0 +1,24 @@
+<div class="signup-card">
+
+  <div class="card-title">
+      <h1>Crear una cuenta</h1>
+      <br>
+      <span>¿Ya tienes una cuenta? <a routerLink="/login">Loggeate</a></span>
+  </div>
+
+  <form class="form-group" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+      <input type="text" name="fullName" placeholder="Nombre y apellidos" formControlName="fullName">
+      <br><br>
+
+      <input type="text" name="email" placeholder="Email" formControlName="email">
+      <br><br>
+
+      <input type="password" name="password" placeholder="Contraseña (mayúsculas, minúsculas y números)" formControlName="password">
+      <br><br>
+
+      <br><br>
+      <input type="submit" [disabled]="!signupForm.valid" value="Signup">
+  </form>
+
+</div>

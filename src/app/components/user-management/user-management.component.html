@@ -1,0 +1,87 @@
+<button class="back-button" (click)="goToDashboard()">Volver al Dashboard</button>
+<div class="user-management">
+  <h1>Gestión de Usuarios</h1>
+
+  <div class="search-section">
+    <input type="number" placeholder="Buscar por ID" [(ngModel)]="searchId" />
+    <button (click)="searchUserById()">Buscar por ID</button>
+  </div>
+
+  <div *ngIf="selectedUser && searchId > 0" class="user-detail">
+    <h2>Usuario Encontrado</h2>
+    <p><strong>ID:</strong> {{ selectedUser.id }}</p>
+    <p><strong>Nombre Completo:</strong> {{ selectedUser.fullName }}</p>
+    <p><strong>Correo Electrónico:</strong> {{ selectedUser.email }}</p>
+  </div>
+
+  <h2>Lista de Usuarios</h2>
+  <table *ngIf="users.length > 0" class="users-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre Completo</th>
+        <th>Correo Electrónico</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.fullName }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button (click)="selectUserForEdit(user)">Editar</button>
+          <button (click)="deleteUser(user.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination" *ngIf="users.length > 0">
+    <button (click)="goToPage(page - 1)" [disabled]="page === 0">Anterior</button>
+    <span>Página {{ page + 1 }} de {{ totalPages }}</span>
+    <button (click)="goToPage(page + 1)" [disabled]="page + 1 >= totalPages">Siguiente</button>
+  </div>
+
+   <!-- Sección de ordenar por -->
+   <div class="sorting-section">
+
+    <label for="sort">Ordenar por:</label>
+    <select id="sort" [(ngModel)]="sort" (change)="getUsers()">
+      <option value="id">ID</option>
+      <option value="fullName">Nombre Completo</option>
+      <option value="email">Correo Electrónico</option>
+    </select>
+
+    <label for="direction">Dirección:</label>
+    <select id="direction" [(ngModel)]="direction" (change)="getUsers()">
+      <option value="asc">Ascendente</option>
+      <option value="desc">Descendente</option>
+    </select>
+  </div>
+
+
+
+  <div *ngIf="selectedUser && isEditMode" class="edit-section">
+    <h2>Editar Usuario</h2>
+    <div class="edit-form">
+      <label for="fullName">Nombre Completo:</label>
+      <input type="text" id="fullName" [(ngModel)]="selectedUser.fullName" placeholder="Editar nombre completo" />
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" [(ngModel)]="selectedUser.email" placeholder="Editar correo electrónico" />
+      <label for="password">Contraseña (opcional):</label>
+        <input
+          type="password"
+          [(ngModel)]="selectedUser.password"
+          placeholder="Contraseña (opcional)"
+          id="password"
+        />
+
+      <div class="action-buttons">
+        <button (click)="updateUser()">Actualizar</button>
+        <button (click)="closeEdit()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

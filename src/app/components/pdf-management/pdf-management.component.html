@@ -1,0 +1,42 @@
+<button class="back-button" (click)="goToDashboard()">Volver al Dashboard</button>
+<div class="wrapper">
+  <div class="pdf-management">
+    <h1>Gestión de PDFs</h1>
+
+    <!-- Subir PDF -->
+    <div class="pdf-section">
+      <h2>Subir PDF</h2>
+      <input type="file" (change)="onFileSelected($event)" />
+      <input type="number" placeholder="User ID" [(ngModel)]="userId" required />
+      <button (click)="uploadPdf()" *ngIf="isAdmin">Subir PDF</button>
+    </div>
+
+    <!-- Ver PDF -->
+    <div class="pdf-section">
+      <h2>Ver PDF</h2>
+      <input type="number" placeholder="User ID" [(ngModel)]="userId" required />
+      <button (click)="viewPdf()" *ngIf="isAdmin">Ver PDF</button>
+
+      <!-- Mostrar PDF -->
+      <div *ngIf="displayedPdf">
+        <a [href]="displayedPdf" target="_blank">Ver PDF del usuario</a>
+      </div>
+    </div>
+
+    <!-- Actualizar PDF -->
+    <div class="pdf-section">
+      <h2>Actualizar PDF</h2>
+      <input type="file" (change)="onFileSelected($event)" />
+      <input type="number" placeholder="User ID" [(ngModel)]="userId" required />
+      <button (click)="updatePdf()" *ngIf="isAdmin">Actualizar PDF</button>
+    </div>
+
+    <!-- Eliminar PDF -->
+    <div class="pdf-section">
+      <h2>Eliminar PDF</h2>
+      <input type="number" placeholder="User ID" [(ngModel)]="userId" required />
+      <button (click)="deletePdf()" *ngIf="isAdmin">Eliminar PDF</button>
+    </div>
+  </div>
+</div>
+

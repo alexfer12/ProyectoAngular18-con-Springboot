@@ -1,0 +1,53 @@
+<button class="back-button" (click)="goToDashboard()">Volver al Dashboard</button>
+<div class="wrapper">
+  <div class="image-management">
+    <h1>Gestión de Imágenes</h1>
+
+
+    <div class="image-section">
+      <h2>Ver Imagen</h2>
+      <div *ngIf="isAdmin">
+
+        <input type="number" placeholder="User ID" [(ngModel)]="userId" required />
+      </div>
+      <div *ngIf="isUser">
+
+        <p>Tu User ID: {{ userId }}</p>
+        <input *ngIf="userId === null" type="number" placeholder="Escribe tu User ID" [(ngModel)]="userId" required />
+      </div>
+      <button (click)="viewImage()">Ver Imagen</button>
+
+      <div *ngIf="displayedImage">
+        <img [src]="displayedImage" alt="Imagen del usuario" />
+      </div>
+    </div>
+
+
+    <div *ngIf="isAdmin">
+      <!-- Subir Imagen -->
+      <div class="image-section">
+        <h2>Subir Imagen</h2>
+        <input type="file" (change)="onFileSelected($event)" />
+        <input type="number" placeholder="User ID" [(ngModel)]="userId" required />
+        <button (click)="uploadImage()">Subir Imagen</button>
+      </div>
+
+      <!-- Actualizar Imagen -->
+      <div class="image-section">
+        <h2>Actualizar Imagen</h2>
+        <input type="file" (change)="onFileSelected($event)" />
+        <input type="number" placeholder="User ID" [(ngModel)]="userId" required />
+        <button (click)="updateImage()">Actualizar Imagen</button>
+      </div>
+
+      <!-- Eliminar Imagen -->
+      <div class="image-section">
+        <h2>Eliminar Imagen</h2>
+        <input type="number" placeholder="User ID" [(ngModel)]="userId" required />
+        <button (click)="deleteImage()">Eliminar Imagen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

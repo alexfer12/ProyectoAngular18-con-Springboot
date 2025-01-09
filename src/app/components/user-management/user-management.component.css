@@ -1,0 +1,290 @@
+
+body, html {
+  background-color: #f0f4f8;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.user-management {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Títulos principales */
+.user-management h1 {
+  font-size: 2rem;
+  color: #457bb6;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #457bb6;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid #457bb6;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Sección de búsqueda */
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search-section input[type="number"] {
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  min-width: 200px;
+  width: 200px;
+}
+
+.search-section button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Detalles del usuario */
+.user-detail {
+  background-color: #e0f7fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.95rem;
+}
+
+.user-detail p {
+  margin: 5px 0;
+}
+
+.user-detail strong {
+  color: #007bff;
+}
+
+/* Tabla de usuarios */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.users-table th,
+.users-table td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.users-table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.users-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Botones de acción */
+.users-table td button {
+  padding: 5px 8px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+}
+
+.users-table td button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.users-table td button:first-child:hover {
+  background-color: #218838;
+}
+
+.users-table td button:last-child {
+  background-color: #dc3545;
+  color: white;
+  margin-left: 10px;
+}
+
+.users-table td button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination span {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Formulario de edición */
+.edit-section {
+  margin-top: 30px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form label {
+  font-weight: bold;
+}
+
+.edit-form input {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.action-buttons button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+}
+
+.action-buttons button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-buttons button:first-child:hover {
+  background-color: #218838;
+}
+
+.action-buttons button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-buttons button:last-child:hover {
+  background-color: #c82333;
+}
+
+/*ordenar por */
+.sorting-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.sorting-section select {
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.sorting-section label {
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: bold;
+}
+/*  Dashboard */
+.back-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px 5px;
+  background-color: #4c8ec7;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  width: 100px;
+  text-align: right;
+}
+
+/* Hover y active del botón */
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+.back-button:active {
+  background-color: #495057;
+}

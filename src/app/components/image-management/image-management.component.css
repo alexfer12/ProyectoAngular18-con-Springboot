@@ -1,0 +1,158 @@
+/* Fondo  */
+body, html {
+  background-color: #f3f4f6;
+  color: #333333;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Contenedor img */
+.image-management {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+}
+
+/* Título */
+.image-management h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+/* operacioness */
+.image-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-section h2 {
+  font-size: 1.4rem;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+/* entrada */
+input[type="file"],
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #f8f9fa;
+}
+
+/* Placeholder */
+input[type="number"]::placeholder {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/*inputs */
+input[type="file"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Botones */
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover y active */
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+button:active {
+  background-color: #004494;
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botón de volver */
+.back-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px 5px;
+  background-color: #4c8ec7;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  width: 100px;
+  text-align: right;
+}
+
+/* Hover y active del botón */
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+.back-button:active {
+  background-color: #495057;
+}
+
+/* Imagen  */
+img {
+  width: 100%;
+  max-height: 400px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  object-fit: cover;
+}
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.user-list li {
+  margin-bottom: 8px;
+}
+
+.user-list input[type="radio"] {
+  margin-right: 10px;
+}

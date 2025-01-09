@@ -1,0 +1,168 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html {
+  height: 100%;
+  background-color: #f3f4f6;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 50px;
+}
+
+
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  width: 100%;
+}
+
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+
+.input-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+
+.input-box input {
+  width: 100%;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333333;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-box input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #6c8ac9;
+}
+
+/* Botón de login */
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #004494;
+}
+
+/* Enlaces */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember label {
+  color: #666666;
+}
+
+.remember a {
+  color: #007bff;
+}
+
+.register {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register p {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.register a {
+  color: #007bff;
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Responsiv*/
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
